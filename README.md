@@ -137,7 +137,8 @@ If you use this repository, please cite the following work:
 
 For derived data and analysis scripts:
 
-> Roozbeh [Your Last Name], 2026. GitHub repository: `EOC_WNT_TGFb_EMT_Transcriptomics`. [https://github.com/yourusername/EOC_WNT_TGFb_EMT_Transcriptomics](https://github.com/yourusername/EOC_WNT_TGFb_EMT_Transcriptomics)
+> Roozbeh Heidarzadeh, 2026. GitHub repository: EOC_WNT_TGFb_EMT_Transcriptomics. https://github.com/heidarzadehroozbeh-cmyk/EOC_WNT_TGFb_EMT_Transcriptomics
+
 
 ---
 
