@@ -1,0 +1,56 @@
+# ===============================================
+# Script 01: Preprocess GEO Microarray Datasets
+# Author: Roozbeh
+# Purpose: Read CSVs from GEO, basic preprocessing, and save RDS files
+# Datasets: GSE14407, GSE216150, GSE38666, GSE52037
+# ===============================================
+
+# --- 0. Setup environment ---
+rm(list = ls())
+options(stringsAsFactors = FALSE)
+library(dplyr)
+
+# --- 1. Define paths and GEO IDs ---
+geo_ids <- c("GSE14407", "GSE216150", "GSE38666", "GSE52037")
+raw_data_path <- "data/GEO_raw/"
+rds_output_path <- "data/GEO_rds/"
+
+if(!dir.exists(rds_output_path)) dir.create(rds_output_path)
+
+# --- 2. Function: basic preprocessing ---
+preprocess_dataset <- function(expr_csv, pheno_csv){
+  expr <- read.csv(expr_csv, row.names = 1)
+  pheno <- read.csv(pheno_csv, row.names = 1)
+  
+  # Log2 transform
+  expr <- log2(expr + 1)
+  
+  # Remove empty rows
+  expr <- expr[!apply(expr, 1, function(x) all(is.na(x))), ]
+  
+  return(list(expr = expr, pheno = pheno))
+}
+
+# --- 3. Loop over GEO IDs and process ---
+for(gid in geo_ids){
+  cat("🔹 Processing ", gid, "...\n")
+  
+  expr_csv <- paste0(raw_data_path, gid, "_expression_matrix.csv")
+  pheno_csv <- paste0(raw_data_path, gid, "_phenotype_data.csv")
+  
+  if(!file.exists(expr_csv) | !file.exists(pheno_csv)){
+    warning("⚠️ Files for ", gid, " not found. Skipping...")
+    next
+  }
+  
+  processed <- preprocess_dataset(expr_csv, pheno_csv)
+  
+  # --- 4. Save RDS files for Script 02 ---
+  saveRDS(processed$expr, paste0(rds_output_path, gid, "_expr_raw.RDS"))
+  saveRDS(processed$pheno, paste0(rds_output_path, gid, "_pheno_raw.RDS"))
+  
+  cat("✅ ", gid, " processed and saved as RDS.\n\n")
+}
+
+# --- 5. Summary ---
+cat("All datasets processed. RDS files saved in: ", rds_output_path, "\n")

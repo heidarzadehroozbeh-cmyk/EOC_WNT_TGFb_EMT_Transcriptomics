@@ -1,0 +1,19 @@
+############################################################
+# Script: 00_setup_directories.R
+# Description: Create project directory structure
+############################################################
+
+dirs <- c("data",
+          "results",
+          "results/tables",
+          "results/figures",
+          "results/enrichment",
+          "docs")
+
+for (d in dirs) {
+  if (!dir.exists(d)) {
+    dir.create(d, recursive = TRUE)
+  }
+}
+
+cat("Project directory structure created successfully.\n")

@@ -1,0 +1,17 @@
+library(readxl)
+library(dplyr)
+library(writexl)
+
+# فایل ورودی
+input_file <- "path_to_your_file.xlsx"
+output_file <- "path_to_your_file_with_group.xlsx"
+
+# خواندن فایل
+df <- read_excel(input_file)
+
+# اضافه کردن ستون خالی 'group'
+df <- df %>%
+  mutate(group = NA_character_)
+
+# ذخیره فایل جدید با ستون خالی
+write_xlsx(df, output_file)
