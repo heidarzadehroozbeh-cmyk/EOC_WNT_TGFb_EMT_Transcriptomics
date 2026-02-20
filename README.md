@@ -12,8 +12,9 @@ Comprehensive transcriptomic analysis of **epithelial ovarian cancer (EOC)** wit
 4. [Usage](#usage)
 5. [Scripts Description](#scripts-description)
 6. [Datasets](#datasets)
-7. [Citation](#citation)
-8. [License](#license)
+7. [Author](#author)
+8. [Citation](#citation)
+9. [License](#license)
 
 ---
 
