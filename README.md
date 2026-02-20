@@ -156,7 +156,3 @@ This project is released under **CC BY-NC 4.0**.
 You are free to **share** and **adapt** the material for **non-commercial purposes**, provided appropriate credit is given and modifications are indicated.
 
 ---
-
-If you want, I can also **polish the README further with badges, automatic workflow diagrams, and R version info** so it looks like a professional GitHub bio-ready project page.
-
-Do you want me to do that next?
