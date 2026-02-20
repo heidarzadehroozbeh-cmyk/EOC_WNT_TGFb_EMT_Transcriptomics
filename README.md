@@ -129,15 +129,21 @@ Consensus DEGs are defined as **directionally concordant across all 3 mRNA datas
 
 ---
 
+## Author
+
+Dr Roozbeh Heidarzadehpilehrood
+Affiliation: Independent researcher, Human Genetics, Genomics & Transcriptomics
+Contact: heidarzadeh.roozbeh@gmail.com
+
+---
+
 ## Citation
 
-If you use this repository, please cite the following work:
+If you use this code or parts of the pipeline, please cite both:
 
-> ** Heidarzadehpilehrood R, Ling K-H, Abdul Hamid H (2026) Integrative transcriptomic analysis of WNT/TGFβ-driven EMT pathways and drug-gene interaction networks in epithelial ovarian cancer. Advances in Cancer Biology - Metastasis 16:100178. [https://doi.org/10.1016/j.adcanc.2026.100178].
+> Heidarzadehpilehrood R, Ling K-H, Abdul Hamid H (2026) Integrative transcriptomic analysis of WNT/TGFβ-driven EMT pathways and drug-gene interaction networks in epithelial ovarian cancer. Advances in Cancer Biology - Metastasis 16:100178. [https://doi.org/10.1016/j.adcanc.2026.100178].
 
-For derived data and analysis scripts:
-
-> Roozbeh Heidarzadeh, 2026. GitHub repository: EOC_WNT_TGFb_EMT_Transcriptomics. https://github.com/heidarzadehroozbeh-cmyk/EOC_WNT_TGFb_EMT_Transcriptomics
+> Heidarzadehpilehrood R, 2026. GitHub repository: EOC_WNT_TGFb_EMT_Transcriptomics_2026. (https://zenodo.org/records/18711967)
 
 
 ---
